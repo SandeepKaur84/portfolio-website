@@ -13,7 +13,7 @@ It showcases my projects, skills, and contact information.
 ## 🛠️ Tech Stack
 - React.js
 - CSS3
-- JavaScript (ES6+)
+- JavaScript
 - EmailJS (for contact form)
 
 ## 📂 Project Structure
@@ -27,3 +27,11 @@ MyPortfolio/
 │ └── App.js
 ├── package.json
 └── README.md
+
+## 📸 Portfolio Screenshots
+
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
+
+### 💼 Projects
+![Projects](./screenshots/projects.png)
