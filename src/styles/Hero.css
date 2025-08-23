@@ -1,0 +1,96 @@
+.hero {
+  display: flex;
+  align-items: stretch; 
+  justify-content: space-between;
+  height: 100vh; 
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  clip-path: polygon(0 0, 40% 0, 55% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.hero-left p {
+  font-size: 32px;
+  color: #fff;
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #f3742b;
+  margin-left: 40px;
+}
+
+.hero-left h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-left: 40px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  margin-left: 40px;
+
+}
+
+.social-icons a {
+  margin-right: 18px;
+  font-size: 28px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f3742b;
+}
+
+.hero-left {
+  flex: 1.2;
+  color: #fff;
+  z-index: 2;
+  padding-left: 40px;
+  margin-left: 60px;
+  display: flex;            
+  flex-direction: column;    
+  justify-content: center;    
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+
+.hero-right img {
+  height: 100%;   
+  width: auto;     
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin-top: 60px;
+}
+
+.hero-right img:hover {
+  transform: scale(1.02);
+}
+
+
+
+
