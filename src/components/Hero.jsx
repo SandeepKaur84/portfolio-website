@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-left">
         <p>Hi, I am</p>
         <h1>Sandeep Kaur</h1>
-        <h3>React Native Developer</h3>
+        <h3>Aspiring Software Developer</h3>
 
         <div className="social-icons">
            <a

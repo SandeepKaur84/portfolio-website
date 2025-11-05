@@ -20,6 +20,16 @@ const Projects = () => {
           </div>
 
           <div className="project-card">
+            <h3>MediAid 🏥</h3>
+            <p>
+              A full-stack MERN healthcare platform that connects patients with
+              doctors, allowing online appointment booking, profile management,
+              and secure login for both users and admins.
+            </p>
+            <span className="tech-stack">MongoDB · Express · React · Node.js</span>
+          </div>
+
+          <div className="project-card">
             <h3>FOODORA 🍔</h3>
             <p>
               An Android application that allows users to order food from campus
@@ -41,7 +51,7 @@ const Projects = () => {
 
         <div className="view-projects-btn">
           <a
-            href="https://github.com/SandeepKaur84"
+            href="https://github.com/SandeepKaur84?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="projects-link-btn"

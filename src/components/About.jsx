@@ -39,7 +39,7 @@ const About = () => {
         <div className="resume-btn-container">
           <a
             href="/Sandeep_Kaur_Resume.pdf"
-            download="Sandeep_Kaur_Resume.pdf"
+            download="SandeepKaur_Resume.pdf"
             className="resume-btn"
           >
             📄 Download Resume
