@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "../styles/Navbar.css";
 
 const links = [
@@ -11,9 +12,22 @@ const links = [
 const Navbar = () => {
   return (
     <header className="navbar">
-      <a className="logo" href="#hero" aria-label="Sandeep Kaur home">
-        SK
-      </a>
+      <div className="navbar-brand">
+        <motion.a
+          className="logo"
+          href="#hero"
+          aria-label="Sandeep Kaur home"
+          whileHover={{ y: -2, scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        >
+          SK
+        </motion.a>
+
+        <div className="navbar-meta">
+          <span className="navbar-name">Sandeep Kaur</span>
+          <span className="navbar-status">Open to work</span>
+        </div>
+      </div>
 
       <nav className="nav-panel">
         {links.map((link) => (

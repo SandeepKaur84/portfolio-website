@@ -26,6 +26,29 @@
   will-change: transform;
 }
 
+.project-card--compact .project-preview {
+  min-height: 200px;
+  padding: 12px;
+}
+
+.project-card--compact .project-preview-frame {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.project-card--compact .project-image {
+  min-height: 140px;
+}
+
+.project-card--compact .project-copy {
+  gap: 10px;
+  padding: 18px;
+}
+
+.project-card--compact .project-copy h3 {
+  font-size: 1.2rem;
+}
+
 .project-preview {
   position: relative;
   padding: 16px;
@@ -266,6 +289,27 @@
   font-size: 1.35rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-meta-pill {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(180, 83, 9, 0.14);
+  background: rgba(180, 83, 9, 0.06);
+  color: var(--accent);
+  font-size: 0.78rem;
+}
+
+.project-meta-pill--soft {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .project-copy p {

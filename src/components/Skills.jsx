@@ -15,7 +15,25 @@ const Skills = () => {
         transition={{ duration: 0.6 }}
       >
         <span className="section-kicker">Skills</span>
-        <h2>Stack depth that supports real products.</h2>
+        <h2>Tools and approaches that support real product work.</h2>
+      </Motion.div>
+
+      <Motion.div
+        className="skills-intro"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.35 }}
+        transition={{ duration: 0.6 }}
+      >
+        <p>
+          I enjoy building clean interfaces, dependable APIs, and thoughtful
+          flows that make everyday product experiences feel smoother.
+        </p>
+        <div className="skills-pill-row">
+          <span>Frontend systems</span>
+          <span>Backend APIs</span>
+          <span>Mobile experiences</span>
+        </div>
       </Motion.div>
 
       <div className="skills-grid">

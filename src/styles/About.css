@@ -16,6 +16,21 @@
   font-size: 1.01rem;
 }
 
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-highlights span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(180, 83, 9, 0.06);
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
 .about-bullets {
   list-style: none;
   display: grid;

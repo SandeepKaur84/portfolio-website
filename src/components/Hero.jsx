@@ -26,7 +26,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Aspiring Software Developer
+          Full Stack Developer
         </Motion.span>
 
         <Motion.h1
@@ -43,9 +43,30 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          Aspiring software developer with a strong academic foundation in
-          computer applications and programming.
+          I build polished web and mobile experiences that feel thoughtful,
+          reliable, and easy to use. My work blends strong UI decisions with
+          practical frontend and backend implementation.
         </Motion.p>
+
+        <Motion.div
+          className="hero-stats"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+        >
+          {/* <div className="hero-stat">
+            <strong>4+</strong>
+            <span>featured builds</span>
+          </div> */}
+          {/* <div className="hero-stat">
+            <strong>React</strong>
+            <span>web & mobile</span>
+          </div> */}
+          {/* <div className="hero-stat">
+            <strong>Open</strong>
+            <span>to junior roles</span>
+          </div> */}
+        </Motion.div>
 
         <Motion.div
           className="typing-line"
@@ -64,13 +85,13 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.35 }}
         >
           <a className="primary-btn" href="#projects">
-            View Projects
+            Explore Projects
           </a>
           <a className="secondary-btn" href="/Sandeep_Kaur_Resume.pdf" download>
-            Download Resume
+            View Resume
           </a>
           <a className="ghost-btn" href="#contact">
-            Contact Me
+            Let&apos;s Talk
           </a>
         </Motion.div>
       </div>
@@ -88,7 +109,7 @@ const Hero = () => {
             className="hero-avatar"
           />
         </div>
-        <div className="avatar-caption">React Native / Node.js / MongoDB</div>
+        <div className="avatar-caption">React / React Native / Node.js</div>
       </Motion.div>
     </section>
   );

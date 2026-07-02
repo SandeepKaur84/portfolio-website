@@ -19,7 +19,9 @@ const cardVariants = {
 
 const ProjectCard = ({ project, index }) => (
   <Motion.article
-    className="project-card glass-card"
+    className={`project-card glass-card ${
+      project.previewSize === "compact" ? "project-card--compact" : ""
+    }`}
     custom={index}
     variants={cardVariants}
     initial="hidden"
@@ -74,6 +76,12 @@ const ProjectCard = ({ project, index }) => (
         <span className="project-eyebrow">{project.badge}</span>
         <h3>{project.title}</h3>
       </div>
+      <div className="project-meta">
+        <span className="project-meta-pill">{project.category}</span>
+        <span className="project-meta-pill project-meta-pill--soft">
+          {project.outcome}
+        </span>
+      </div>
       <p>{project.description}</p>
 
       <ul className="project-highlights">
@@ -94,7 +102,7 @@ const ProjectCard = ({ project, index }) => (
       <div className="project-actions">
         <a href={project.githubUrl} target="_blank" rel="noreferrer">
           <i className="fab fa-github" />
-          GitHub
+          View repository
         </a>
       </div>
     </div>
@@ -112,10 +120,10 @@ const Projects = () => {
         transition={{ duration: 0.6 }}
       >
         <span className="section-kicker">Featured Projects</span>
-        <h2>Selected work with real screenshots and live GitHub repos.</h2>
+        <h2>Selected work with clear product thinking and polished UI.</h2>
         <p className="section-subtitle">
-          Each card below reflects the actual UI direction of the project, so
-          the portfolio feels polished and honest at the same time.
+          These projects highlight how I approach product detail, user flow, and
+          interface design with a modern, real-world perspective.
         </p>
       </Motion.div>
 

@@ -7,21 +7,21 @@ const Motion = motion;
 const aboutCards = [
   {
     icon: "fa-layer-group",
-    title: "Full Stack Thinking",
+    title: "Full stack thinking",
     description:
-      "Designing features from interface to API so the product feels coherent end to end.",
+      "Designing features from interface to API so the experience feels coherent end to end.",
   },
   {
     icon: "fa-mobile-screen-button",
-    title: "Mobile First",
+    title: "Mobile-first mindset",
     description:
-      "Building React Native experiences that feel fast, intentional, and native-friendly.",
+      "Creating React Native experiences that feel fast, intentional, and comfortable on small screens.",
   },
   {
     icon: "fa-database",
-    title: "Real Data Flow",
+    title: "Practical data flow",
     description:
-      "Structuring MongoDB collections and APIs around actual application behavior.",
+      "Structuring APIs and data models around real product behavior instead of abstract patterns.",
   },
 ];
 
@@ -36,7 +36,7 @@ const About = () => {
         transition={{ duration: 0.6 }}
       >
         <span className="section-kicker">About Me</span>
-        <h2>Aspiring software developer who likes practical, useful builds.</h2>
+        <h2>I enjoy turning product ideas into thoughtful, usable experiences.</h2>
       </Motion.div>
 
       <div className="about-layout">
@@ -48,11 +48,17 @@ const About = () => {
           transition={{ duration: 0.7 }}
         >
           <p>
-            I am Sandeep Kaur, an aspiring software developer with a strong
-            academic foundation in computer applications and programming. I like
-            building real-world projects, learning new technologies, and solving
-            complex problems with simple interfaces.
+            I am Sandeep Kaur, a developer who enjoys building practical web and
+            mobile products with a strong focus on usability, structure, and a
+            clean user experience. I like turning ideas into dependable features
+            that feel simple to use and easy to maintain.
           </p>
+
+          <div className="about-highlights">
+            <span>React & React Native</span>
+            <span>Node.js & MongoDB</span>
+            <span>Clean UI & thoughtful UX</span>
+          </div>
 
           <ul className="about-bullets">
             {aboutBullets.map((bullet) => (
