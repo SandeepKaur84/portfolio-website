@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,16 +8,28 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        "",
+        `${window.location.pathname}${window.location.search}`,
+      );
+    }
+  }, []);
+
   return (
-    <>
+    <div className="app-shell">
       <Navbar />
       <Hero />
-      <About/>
-      <Skills/>
+      <About />
+      <Skills />
       <Projects />
       <Contact />
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 

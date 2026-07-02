@@ -1,27 +1,58 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { skillGroups } from "../data/portfolioData";
 import "../styles/Skills.css";
 
-const skills = [
-  { name: "HTML5", icon: "fab fa-html5", color: "#E34F26" },
-  { name: "CSS3", icon: "fab fa-css3-alt", color: "#1572B6" },
-  { name: "JavaScript", icon: "fab fa-js", color: "#F7DF1E" },
-  { name: "React.js", icon: "fab fa-react", color: "#61DAFB" },
-   { name: "React Native", icon: "fab fa-react", color: "#61DAFB" },
-  { name: "Node.js", icon: "fab fa-node-js", color: "#68A063"   },
-  { name: "Database", icon: "fas fa-database", color: "#f3742b" },
-  { name: "GitHub", icon: "fab fa-github", color: "#fff" },
-];
+const Motion = motion;
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills">
-      <h2 className="skills-title">Core Skills</h2>
+    <section id="skills" className="section-block skills-section">
+      <Motion.div
+        className="section-heading"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="section-kicker">Skills</span>
+        <h2>Stack depth that supports real products.</h2>
+      </Motion.div>
+
       <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <div className="skill-card" key={index}>
-            <i className={`skill-icon ${skill.icon}`} style={{ color: skill.color }}></i>
-            <p className="skill-name">{skill.name}</p>
-          </div>
+        {skillGroups.map((group, groupIndex) => (
+          <Motion.article
+            key={group.title}
+            className="skills-card glass-card"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: groupIndex * 0.08 }}
+          >
+            <div className="skills-card-header">
+              <h3>{group.title}</h3>
+              <p>{group.subtitle}</p>
+            </div>
+
+            <div className="skill-list">
+              {group.items.map((skill) => (
+                <div key={skill.name} className="skill-row">
+                  <div className="skill-row-label">
+                    <span>{skill.name}</span>
+                    <span>{skill.progress}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <Motion.span
+                      className="skill-bar-fill"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.progress}%` }}
+                      viewport={{ once: true, amount: 0.4 }}
+                      transition={{ duration: 1, ease: "easeOut" }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Motion.article>
         ))}
       </div>
     </section>
